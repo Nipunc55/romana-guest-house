@@ -555,8 +555,8 @@ export default function Home() {
                   </g>
                 </svg>
                 <div className={styles.mapAddressCard}>
-                  <p><strong>Via Alfredo Gargiulo 86</strong></p>
-                  <p>00124 Infernetto, Rome, Italy</p>
+                  <p><strong>Via Alfredo Gargiulo, 86</strong></p>
+                  <p>00124 Roma RM, Italy</p>
                 </div>
               </div>
             </div>
@@ -580,7 +580,7 @@ export default function Home() {
                   <span className={styles.detailIcon}>📍</span>
                   <div className={styles.detailText}>
                     <strong>Address</strong>
-                    <p>Via Alfredo Gargiulo 86, 00124 Rome, Italy</p>
+                    <p>Via Alfredo Gargiulo, 86, 00124 Roma RM, Italy</p>
                   </div>
                 </div>
 
@@ -588,7 +588,7 @@ export default function Home() {
                   <span className={styles.detailIcon}>📞</span>
                   <div className={styles.detailText}>
                     <strong>Phone</strong>
-                    <p><a href="tel:+390681157001">+39 068 1157001</a></p>
+                    <p><a href="tel:+393270515399">+39 327 051 5399</a></p>
                   </div>
                 </div>
 
@@ -596,7 +596,7 @@ export default function Home() {
                   <span className={styles.detailIcon}>✉</span>
                   <div className={styles.detailText}>
                     <strong>Email Address</strong>
-                    <p><a href="mailto:info@romanaguesthouse.com">info@romanaguesthouse.com</a></p>
+                    <p><a href="mailto:info@romanaguesthouse.net">info@romanaguesthouse.net</a></p>
                   </div>
                 </div>
               </div>
@@ -671,10 +671,10 @@ export default function Home() {
 
           <div className={styles.footerLinksGroup}>
             <h4 className={styles.footerHeading}>Contact</h4>
-            <p className={styles.footerInfoText}>Via Alfredo Gargiulo 86</p>
-            <p className={styles.footerInfoText}>00124 Infernetto, Rome, Italy</p>
-            <p className={styles.footerInfoText}>Phone: +39 068 1157001</p>
-            <p className={styles.footerInfoText}>info@romanaguesthouse.com</p>
+            <p className={styles.footerInfoText}>Via Alfredo Gargiulo, 86</p>
+            <p className={styles.footerInfoText}>00124 Roma RM, Italy</p>
+            <p className={styles.footerInfoText}>Phone: +39 327 051 5399</p>
+            <p className={styles.footerInfoText}>info@romanaguesthouse.net</p>
           </div>
         </div>
 
