@@ -219,28 +219,29 @@ export default function Home() {
               <div className={styles.roomImageWrapper}>
                 <img
                   src="/images/Gallery/bedroom 6.jpeg"
-                  alt="Deluxe Garden Room"
+                  alt="Triple Room with Private Bathroom"
                   className={styles.roomImage}
                 />
-                <span className={styles.roomPrice}>From €110/night</span>
+                <span className={styles.roomPrice}>From €120/night</span>
               </div>
               <div className={styles.roomInfo}>
-                <h3 className={styles.roomTitle}>Deluxe Garden Room</h3>
+                <h3 className={styles.roomTitle}>Triple Room with Private Bathroom</h3>
                 <div className={styles.roomSpecs}>
-                  <span>28 m²</span>
+                  <span>30 m²</span>
                   <span className={styles.specDot}>•</span>
-                  <span>Direct Garden Access</span>
+                  <span>Terrace & Garden View</span>
                   <span className={styles.specDot}>•</span>
-                  <span>Max 2 Guests</span>
+                  <span>Max 3 Guests</span>
                 </div>
                 <p className={styles.roomDesc}>
-                  A luxurious double bedroom featuring private patio doors opening directly onto the villa's garden lawn. Perfect for peaceful morning coffees.
+                  Featuring a private terrace with lovely garden views, this spacious triple room offers air conditioning, a wardrobe, and an en-suite bathroom with a bidet and shower. Configured with 1 extra-large double bed and 1 cozy sofa bed.
                 </p>
                 <div className={styles.roomAmenityTags}>
-                  <span>King Bed</span>
-                  <span>Private Patio</span>
+                  <span>1 XL Double Bed</span>
+                  <span>1 Sofa Bed</span>
+                  <span>Garden Terrace</span>
                   <span>A/C</span>
-                  <span>Rain Shower</span>
+                  <span>Bidet & Shower</span>
                   <span>Smart TV</span>
                   <span>Wi-Fi</span>
                 </div>
@@ -255,64 +256,29 @@ export default function Home() {
               <div className={styles.roomImageWrapper}>
                 <img
                   src="/images/Gallery/bedroom  5.jpeg"
-                  alt="Superior Double Room"
+                  alt="Double Room with Private Bathroom"
                   className={styles.roomImage}
                 />
-                <span className={styles.roomPrice}>From €95/night</span>
+                <span className={styles.roomPrice}>From €85/night</span>
               </div>
               <div className={styles.roomInfo}>
-                <h3 className={styles.roomTitle}>Superior Double Room</h3>
+                <h3 className={styles.roomTitle}>Double Room with Private Bathroom</h3>
                 <div className={styles.roomSpecs}>
-                  <span>24 m²</span>
+                  <span>22 m²</span>
                   <span className={styles.specDot}>•</span>
                   <span>Quiet Courtyard View</span>
                   <span className={styles.specDot}>•</span>
                   <span>Max 2 Guests</span>
                 </div>
                 <p className={styles.roomDesc}>
-                  Elegant and quiet room equipped with a plush queen-size bed, detailed Roman accents, and a spacious en-suite marble bathroom.
+                  A cozy and elegant room featuring a plush double bed, air conditioning, heating, a wardrobe, and a flat-screen TV. Includes a private en-suite bathroom with a bidet, shower, hairdryer, and complimentary toiletries.
                 </p>
                 <div className={styles.roomAmenityTags}>
-                  <span>Queen Bed</span>
-                  <span>Marble Bath</span>
-                  <span>A/C</span>
-                  <span>Mini Fridge</span>
-                  <span>Smart TV</span>
-                  <span>Wi-Fi</span>
-                </div>
-                <a href="https://direct-book.com/properties/romanaguesthouse" target="_blank" rel="noopener noreferrer" className={styles.roomBookBtn}>
-                  Book Now
-                </a>
-              </div>
-            </div>
-
-            {/* Room 3 */}
-            <div className={styles.roomCard}>
-              <div className={styles.roomImageWrapper}>
-                <img
-                  src="/images/Gallery/bedroom  3.jpeg"
-                  alt="Classic Twin Room"
-                  className={styles.roomImage}
-                />
-                <span className={styles.roomPrice}>From €85/night</span>
-              </div>
-              <div className={styles.roomInfo}>
-                <h3 className={styles.roomTitle}>Classic Twin Room</h3>
-                <div className={styles.roomSpecs}>
-                  <span>22 m²</span>
-                  <span className={styles.specDot}>•</span>
-                  <span>Lush Garden View</span>
-                  <span className={styles.specDot}>•</span>
-                  <span>Max 2 Guests</span>
-                </div>
-                <p className={styles.roomDesc}>
-                  A bright and charming room configured with two single beds. Styled in warm Mediterranean colors, it offers great comfort for friends.
-                </p>
-                <div className={styles.roomAmenityTags}>
-                  <span>Twin Beds</span>
-                  <span>Garden View</span>
-                  <span>A/C</span>
-                  <span>Espresso Machine</span>
+                  <span>1 Double Bed</span>
+                  <span>A/C & Heating</span>
+                  <span>Private Bath</span>
+                  <span>Bidet & Shower</span>
+                  <span>Hairdryer</span>
                   <span>Smart TV</span>
                   <span>Wi-Fi</span>
                 </div>
