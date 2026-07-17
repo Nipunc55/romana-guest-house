@@ -599,6 +599,14 @@ export default function Home() {
                     <p><a href="mailto:info@romanaguesthouse.net">info@romanaguesthouse.net</a></p>
                   </div>
                 </div>
+
+                <div className={styles.contactDetailItem}>
+                  <span className={styles.detailIcon}>🕒</span>
+                  <div className={styles.detailText}>
+                    <strong>Check-in / Check-out</strong>
+                    <p>Check-in: 14:00 | Check-out: 10:00</p>
+                  </div>
+                </div>
               </div>
             </div>
 
