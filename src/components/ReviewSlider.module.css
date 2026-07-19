@@ -123,13 +123,14 @@
 
 .sliderTrack {
   display: flex;
-  gap: 2rem;
+  gap: var(--gap, 2rem);
   transition: transform var(--transition-slow);
   will-change: transform;
 }
 
 .slideCard {
   flex-shrink: 0;
+  width: calc((100% - (var(--visible-count) - 1) * var(--gap)) / var(--visible-count));
   background-color: var(--white);
   border-radius: var(--radius-lg);
   padding: 2.25rem;

@@ -20,6 +20,10 @@ export default function ReviewSlider() {
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
+  const [isPaused, setIsPaused] = useState(false);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
   const trackRef = useRef<HTMLDivElement>(null);
 
   // Update visible cards based on screen size
@@ -61,20 +65,58 @@ export default function ReviewSlider() {
   }, []);
 
   const nextSlide = () => {
-    if (currentIndex < reviews.length - visibleCount) {
-      setCurrentIndex((prev) => prev + 1);
-    } else {
-      // Loop back to start
-      setCurrentIndex(0);
-    }
+    setCurrentIndex((prev) => {
+      if (prev < reviews.length - visibleCount) {
+        return prev + 1;
+      }
+      return 0;
+    });
   };
 
   const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prev) => prev - 1);
-    } else {
-      // Loop to end
-      setCurrentIndex(reviews.length - visibleCount);
+    setCurrentIndex((prev) => {
+      if (prev > 0) {
+        return prev - 1;
+      }
+      return reviews.length - visibleCount;
+    });
+  };
+
+  // Auto-slide effect
+  useEffect(() => {
+    if (reviews.length <= visibleCount || isPaused) return;
+
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [visibleCount, reviews.length, isPaused]);
+
+  // Swipe handlers for mobile view
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+    setIsPaused(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    setIsPaused(false);
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
     }
   };
 
@@ -102,7 +144,11 @@ export default function ReviewSlider() {
   }
 
   return (
-    <div className={styles.sliderSection}>
+    <div 
+      className={styles.sliderSection}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div className={styles.headerRow}>
         <div className={styles.scorecard}>
           <div className={styles.googleBadge}>
@@ -146,23 +192,26 @@ export default function ReviewSlider() {
         </div>
       </div>
 
-      <div className={styles.sliderViewport}>
+      <div 
+        className={styles.sliderViewport}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div
           className={styles.sliderTrack}
           ref={trackRef}
           style={{
-            transform: `translateX(-${currentIndex * (100 / visibleCount)}%)`,
-          }}
+            "--current-index": currentIndex,
+            "--visible-count": visibleCount,
+            "--gap": "2rem",
+            transform: `translateX(calc(-1 * var(--current-index) * (100% + var(--gap)) / var(--visible-count)))`,
+          } as React.CSSProperties}
         >
           {reviews.map((review) => (
             <div
               className={styles.slideCard}
               key={review.id}
-              style={{
-                width: `calc(${100 / visibleCount}% - ${
-                  visibleCount > 1 ? "1.5rem" : "0px"
-                })`,
-              }}
             >
               <div className={styles.cardHeader}>
                 {review.profile_photo_url ? (
