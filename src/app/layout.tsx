@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     "Rome boutique stay",
   ],
   authors: [{ name: "Romana Guest House" }],
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
   openGraph: {
     title: "Romana Guest House | Cozy Garden Oasis in Rome",
     description: "Relaxing garden stay near Rome’s historic center, Ostia beach, and Fiumicino Airport.",
