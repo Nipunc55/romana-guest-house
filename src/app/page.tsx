@@ -346,29 +346,16 @@ export default function Home() {
             <div className={`${styles.amenityCard} glass`}>
               <div className={styles.amenityIconWrapper}>
                 <svg className={styles.amenityIcon} viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M15.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM5 12c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5zm14.5-8.5c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5zm-3.5-7.72c-.88-.58-1.93-.93-3.07-.93H9.41L11.5 8.1l2.42 2.42c.39.39 1.02.39 1.41 0l2.42-2.42L15.3 5.68l-3.3 3.3-1.68-1.68 3.56-3.56c.39-.39.39-1.02 0-1.41l-.7-.7c-.39-.39-1.02-.39-1.41 0L6.7 6.7c-.52.52-.7 1.25-.51 1.93L7.7 13.5h3.8c1.14 0 2.19.35 3.07.93l1.43-1.43-1.43-1.43z" />
+                  <path fill="currentColor" d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.27-3.82c.14-.4.52-.68.96-.68h9.54c.44 0 .82.28.96.68L19 11H5z" />
                 </svg>
               </div>
-              <h3 className={styles.amenityTitle}>Bicycle Rental</h3>
+              <h3 className={styles.amenityTitle}>Airport Transfer (Paid)</h3>
               <p className={styles.amenityDesc}>
-                We provide custom city cruiser bicycles, allowing you to ride easily down tree-lined streets directly to Ostia's beach sand.
+                Avoid taxi stress with our private, air-conditioned guesthouse transfer service direct to/from Fiumicino Airport (FCO).
               </p>
             </div>
 
             {/* Amenity 5 */}
-            <div className={`${styles.amenityCard} glass`}>
-              <div className={styles.amenityIconWrapper}>
-                <svg className={styles.amenityIcon} viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.27-3.82c.14-.4.52-.68.96-.68h9.54c.44 0 .82.28.96.68L19 11H5z" />
-                </svg>
-              </div>
-              <h3 className={styles.amenityTitle}>Airport Shuttle (Paid)</h3>
-              <p className={styles.amenityDesc}>
-                Avoid taxi stress with our private, air-conditioned guesthouse shuttle service direct to/from Fiumicino Airport (FCO).
-              </p>
-            </div>
-
-            {/* Amenity 6 */}
             <div className={`${styles.amenityCard} glass`}>
               <div className={styles.amenityIconWrapper}>
                 <svg className={styles.amenityIcon} viewBox="0 0 24 24">
@@ -377,7 +364,7 @@ export default function Home() {
               </div>
               <h3 className={styles.amenityTitle}>Shared Guest Lounge</h3>
               <p className={styles.amenityDesc}>
-                A charming communal library and sitting lounge with a free Nespresso bar, travel brochures, board games, and quiet work spaces.
+                A charming communal library and sitting lounge with a free Nespresso bar, travel brochures, and quiet work spaces.
               </p>
             </div>
           </div>
@@ -596,7 +583,7 @@ export default function Home() {
                   <span className={styles.detailIcon}>✉</span>
                   <div className={styles.detailText}>
                     <strong>Email Address</strong>
-                    <p><a href="mailto:info@romanaguesthouse.net">info@romanaguesthouse.net</a></p>
+                    <p><a href="mailto:romanaguesthouserome@gmail.com">romanaguesthouserome@gmail.com</a></p>
                   </div>
                 </div>
 
@@ -682,7 +669,7 @@ export default function Home() {
             <p className={styles.footerInfoText}>Via Alfredo Gargiulo, 86</p>
             <p className={styles.footerInfoText}>00124 Roma RM, Italy</p>
             <p className={styles.footerInfoText}>Phone: +39 327 051 5399</p>
-            <p className={styles.footerInfoText}>info@romanaguesthouse.net</p>
+            <p className={styles.footerInfoText}>romanaguesthouserome@gmail.com</p>
           </div>
         </div>
 
