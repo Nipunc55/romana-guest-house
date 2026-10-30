@@ -690,13 +690,13 @@ export default function Home() {
           <div className={`${styles.footerBottomContainer} container`}>
             <p>© {new Date().getFullYear()} Romana Guest House. All Rights Reserved.</p>
             <div className={styles.footerSocials}>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61585957753114" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Facebook">
                 FB
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
+              <a href="https://www.instagram.com/romanaguesthouse/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
                 IG
               </a>
-              <a href="https://tripadvisor.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="TripAdvisor">
+              <a href="https://www.tripadvisor.it/Hotel_Review-g187791-d33518106-Reviews-Romana_Guest_House-Rome_Lazio.html" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="TripAdvisor">
                 TA
               </a>
             </div>
